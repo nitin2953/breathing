@@ -669,16 +669,17 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             if (g_Config.visuals.showBorder) borderFlags |= MF_CHECKED;
             AppendMenu(hMenu, borderFlags, ID_TOGGLE_BORDER, "Show Border Ring");
 
-            // Toggle Startup Item
-            UINT startupFlags = MF_STRING;
-            if (IsStartupEnabled()) startupFlags |= MF_CHECKED;
-            AppendMenu(hMenu, startupFlags, ID_TOGGLE_STARTUP, "Run at Startup");
-
             // New Separator & Items
             AppendMenu(hMenu, MF_SEPARATOR, 0, NULL);
             AppendMenu(hMenu, MF_STRING, ID_OPEN_LOCATION, "Open App Location");
             AppendMenu(hMenu, MF_STRING, ID_EDIT_CONFIG, "Edit Config");
             AppendMenu(hMenu, MF_STRING, ID_TRAY_RELOAD, "Reload Config");
+
+			// Toggle Startup Item
+			UINT startupFlags = MF_STRING;
+			if (IsStartupEnabled()) startupFlags |= MF_CHECKED;
+			AppendMenu(hMenu, startupFlags, ID_TOGGLE_STARTUP, "Run at Startup");
+
             AppendMenu(hMenu, MF_STRING, ID_TRAY_EXIT, "Exit");
 
             SetForegroundWindow(hwnd);

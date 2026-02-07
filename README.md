@@ -35,9 +35,9 @@ But **I am a web developer.** I have zero experience making native Windows apps.
 
 ## **✨ Features**
 
-- **Ghost Mode:** The window is "click-through". You can keep working/typing while the breathing guide floats above your work.  
+- **Click-Through Overlay:** The window is "click-through". You can keep working/typing while the breathing guide floats above your work.  
 - **System Tray:** Right-click the icon to switch presets (Normal, Focus, Quick) or toggle the border ring.  
-- **Auto-Config:** The app automatically generates a config.ini file if you don't have one.
+- **Auto-Config:** The app automatically generates a `breathing-config.ini` file if you don't have one.
 
 ## **🎨 Visual Config Generator**
 
@@ -48,7 +48,7 @@ I included a file named breathing-config.html ([live version](https://nitin2953.
 1. Open breathing-config.html ([live](https://nitin2953.github.io/breathing/breathing-config.html)) in your browser.  
 2. Optional: **Drag & Drop** a screenshot of your desktop/working app into the page.  
 3. Visually adjust the size, colors, timings and add new presets.  
-4. Click **"Copy Config"** and paste it into your config.ini file.
+4. Click **"Copy Config"** and paste it into your `breathing-config.ini` file.
 
 ## **🤓 Under the Hood (For Developers)**
 

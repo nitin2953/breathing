@@ -1,8 +1,8 @@
 # **Breathing Overlay (Native Windows)**
 
-A tiny, "Zero-Dependency" breathing exercise overlay for Windows.
+A tiny (250KB), "Zero-Dependency" breathing exercise overlay for Windows.
 
-**❤️ For Wellbeing, Nothing else:**
+**❤️ For Wellbeing & Nothing else:**
 
 This project is a personal tool built for mental health and focus. It is completely free, open-source, and not intended for sale or commercial use. I built it to help myself, and I'm sharing it to help you.
 
@@ -18,11 +18,11 @@ My inspiration was [**Exhale**](https://github.com/peterklingelhofer/exhale).
 - The original **macOS version** (built in **Swift**) is fantastic—it is incredibly small, resource-friendly, and smooth.  
 - However, the **Windows/Linux port** was built using **Electron**.
 
-I realized the file size of windows and linux was **over 600MB** and it consumed significant RAM (~100MB) just to render a moving circle.
+I realized the file size of Windows/Linux version was **over 600MB** and it consumed significant RAM (~100MB) just to render a moving circle.
 
 I wanted the efficiency of the original Swift app, but on Windows.
 
-But **I am a web developer.** I have zero experience making native Windows apps. So, I vibe coded **Breathing** using **Gemini Deep Research** and **Antigravity** (Gemini 3 Pro). I tried keeping the app size as low as possible
+But **I am a web developer.** I have zero experience making native Windows apps. So, I vibe coded **Breathing** using **Gemini Deep Research**, **Gemini 3 Pro** and **Antigravity**. I tried keeping the app size as low as possible and resource friendly.
 
 **The Result:**
 
@@ -68,11 +68,12 @@ Uses QueryPerformanceCounter (Hardware Timer) to calculate Delta Time, ensuring 
 
 ### **Option 1: Download**
 
-Go to the [**Releases**](https://github.com/nitin2953/breathing/releases) page and download breathing.exe. Just run it.
+Download Breathing.exe and just run it.
 
 ### **Option 2: Build it yourself**
 
-I used **Visual Studio Build Tools 2022 LTSC -> "Desktop development with C++"**.
+I used **Visual Studio Build Tools 2022 LTSC → "Desktop development with C++"**.
+I have only tested it on Windows 11, it will work on Windows 10, don't know about 8 and surely won't work on Windows 7.
 
 1. Open **Developer Command Prompt for VS 2022**.  
 2. Run:
@@ -81,10 +82,11 @@ I used **Visual Studio Build Tools 2022 LTSC -> "Desktop development with C++"**
   
   cl /std:c++17 /EHsc /O2 main.cpp resource.res user32.lib gdi32.lib shell32.lib d3d11.lib dxgi.lib d2d1.lib dcomp.lib winmm.lib /link /SUBSYSTEM:WINDOWS /OUT:breathing.exe
   ```
+
 ## **⚠️ Note**
 
 This project is "Perfect" for my specific needs. **I do not have time to update, maintain, or add new features.** I am sharing it as-is.
 
 However, if you have ideas or know C++ better than I do, feel free to send a **Pull Request**.
 
-*Readme generated via AI, built with curiosity.*
+*Readme generated via AI.*

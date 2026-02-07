@@ -23,24 +23,24 @@ But **I am a web developer.** I have zero experience making native Windows apps.
 
 **The Result:**
 
-* **Size:** 250KB (\~150KB exe and 100KB icons).  
-* **Performance:** Uses almost 0% CPU, 5-10% GPU and <10MB RAM.  
-* **Tech:** Native C++ using Windows **DirectComposition**.
+- **Size:** 250KB (\~150KB exe and 100KB icons).  
+- **Performance:** Uses almost 0% CPU, 5-10% GPU and <10MB RAM.  
+- **Tech:** Native C++ using Windows **DirectComposition**.
 
 ## **✨ Features**
 
-* **Ghost Mode:** The window is "click-through". You can keep working/typing while the breathing guide floats above your work.  
-* **System Tray:** Right-click the icon to switch presets (Normal, Focus, Quick) or toggle the border ring.  
-* **Auto-Config:** The app automatically generates a `config.ini` file if you don't have one.
+- **Ghost Mode:** The window is "click-through". You can keep working/typing while the breathing guide floats above your work.  
+- **System Tray:** Right-click the icon to switch presets (Normal, Focus, Quick) or toggle the border ring.  
+- **Auto-Config:** The app automatically generates a `config.ini` file if you don't have one.
 
 ## **🎨 Visual Config Generator**
 
 Since I'm a web dev, I didn't want to manually edit text files to change colors.
 
-I included a file named breathing-config.html in this repository.
+I included a file named breathing-config.html ([live](https://nitin2953.github.io/breathing/breathing-config.html)) in this repository.
 
-1. Open breathing-config.html in your browser.  
-2. **Drag & Drop** a screenshot of your desktop/working app into the page.  
+1. Open breathing-config.html ([live](https://nitin2953.github.io/breathing/breathing-config.html)) in your browser.  
+2. Optional: **Drag & Drop** a screenshot of your desktop/working app into the page.  
 3. Visually adjust the size, colors, and timings.  
 4. Click **"Copy Config"** and paste it into your config.ini file.
 
@@ -54,8 +54,8 @@ Electron apps bundle **Chromium** and **Node.js**. This app is written in **Raw 
 
 Most old Windows apps use **GDI**, which is slow for transparency. This app uses **DirectComposition (dcomp.lib)**.
 
-* **Direct2D:** Draws the high-quality anti-aliased circle on the GPU.  
-* **DirectComposition:** Composites that circle onto your screen. It handles the transparency natively at the hardware level.
+- **Direct2D:** Draws the high-quality anti-aliased circle on the GPU.  
+- **DirectComposition:** Composites that circle onto your screen. It handles the transparency natively at the hardware level.
 
 ### **3\. High-Precision Timing**
 
@@ -71,7 +71,7 @@ Go to the [**Releases**](https://github.com/nitin2953/breathing/releases) page a
 
 I used **Visual Studio Build Tools 2022 LTSC -> "Desktop development with C++"**.
 
-1. Open **Developer Command Prompt**.  
+1. Open **Developer Command Prompt for VS 2022**.  
 2. Run:
   ```
   rc resource.rc

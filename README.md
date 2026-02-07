@@ -9,6 +9,9 @@ This project is a personal tool built for mental health and focus. It is complet
 ![Screenshot of Breathing app overlay](screenshot-breathing.gif)
 ![Screenshot of Breathing config generator](screenshot-config.png)
 
+## Disclaimer
+The information and guidance provided by this breathing app are intended for general informational purposes only and should not be construed as medical advice, diagnosis, or treatment. The creator of this app is not a medical professional, and the app is not a substitute for professional medical advice or consultation with a qualified healthcare provider. Always seek the advice of a physician or other qualified healthcare provider with any questions you may have regarding a medical condition or health objectives. Do not disregard or delay seeking professional medical advice because of the information or suggestions provided by this app. In the event of a medical emergency, call your doctor or dial your local emergency number immediately. Use of this app is at your own risk, and the creator assumes no responsibility for any adverse effects or consequences resulting from its use.
+
 ## **The Story**
 
 I was searching for a simple overlay app that stays **Always-on-Top** to help me fix my breathing while using my laptop.

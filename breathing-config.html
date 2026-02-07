@@ -135,15 +135,15 @@
         .app-branding { display: flex; align-items: center; gap: 8px; }
         .title { font-weight: 700; font-size: 0.95rem; color: var(--text-primary); letter-spacing: -0.01em; }
 
-        .win-controls { display: flex; gap: 4px; background: var(--input-bg); padding: 3px; border-radius: 8px; }
+        .win-controls { display: flex; gap: 8px; background: var(--input-bg); padding: 3px; border-radius: 8px; }
         .win-btn {
-            width: 28px; height: 28px; border-radius: 6px; border: none;
+            width: 32px; height: 32px; border-radius: 6px; border: none;
             background: transparent; color: var(--text-secondary);
             display: flex; align-items: center; justify-content: center;
             cursor: pointer; transition: 0.2s;
         }
         .win-btn:hover { background: #fff; color: var(--text-primary); box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-        .win-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .win-btn svg { width: 24px; height: 24px; fill: currentColor; }
 
         /* --- Scrollable Content --- */
         .content {
@@ -207,7 +207,7 @@
         .swatch-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
         .swatch {
             width: 36px; height: 36px; border-radius: var(--radius-md);
-            border: 1px solid rgba(0,0,0,0.08); cursor: pointer;
+            outline: 1px solid rgba(0, 0, 0, 0.1); outline-offset: -2px; cursor: pointer;
             position: relative; overflow: hidden;
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -369,15 +369,15 @@
             <div class="win-controls">
                 <!-- MD3 Icon: Left Panel Close -->
                 <button class="win-btn" onclick="setMode('left')" title="Dock Left">
-                    <svg viewBox="0 -960 960 960"><path d="M160-200v-560h80v560h-80Zm160 0v-560h480v560H320Zm80-80h320v-400H400v400Z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="#1f1f1f" viewBox="0 -960 960 960"><path d="M660-320v-320L500-480zM200-120q-33 0-56-23t-24-57v-560q0-33 24-56t56-24h560q33 0 57 24t23 56v560q0 33-23 57t-57 23zm120-80v-560H200v560zm80 0h360v-560H400zm-80 0H200z"/></svg>
                 </button>
                 <!-- MD3 Icon: Right Panel Close -->
                 <button class="win-btn" onclick="setMode('right')" title="Dock Right">
-                    <svg viewBox="0 -960 960 960"><path d="M720-200v-560h80v560h-80Zm-560 0v-560h480v560H160Zm80-80h320v-400H240v400Z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="#1f1f1f" viewBox="0 -960 960 960"><path d="M300-640v320l160-160zM200-120q-33 0-56-23t-24-57v-560q0-33 24-56t56-24h560q33 0 57 24t23 56v560q0 33-23 57t-57 23zm440-80h120v-560H640zm-80 0v-560H200v560zm80 0h120z"/></svg>
                 </button>
                 <!-- MD3 Icon: Open in New / Float -->
                 <button class="win-btn" onclick="setMode('float')" title="Floating">
-                    <svg viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="#1f1f1f" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56-23t-24-57v-280h80v280h640v-480H440v-80h360q33 0 57 24t23 56v480q0 33-23 57t-57 23zm523-140 57-57-124-123h104v-80H480v240h80v-103zM80-600v-200h280v200zm400 120"/></svg>
                 </button>
             </div>
         </div>
@@ -385,10 +385,10 @@
         <!-- SCROLLABLE CONTENT -->
         <div class="content">
 
-            <!-- Background Section -->
+            <!-- Screen Section -->
             <div class="section">
                 <div class="section-header">
-                    <span class="section-label">Background</span>
+                    <span class="section-label">Screen</span>
                     <button class="btn-sm-action" onclick="document.getElementById('fileInput').click()">Upload Screenshot</button>
                     <input type="file" id="fileInput" class="hidden-input" accept="image/*">
                 </div>
@@ -459,25 +459,25 @@
                 <div class="slider-container">
                     <div class="slider-header">
                         <span class="slider-label">Overlay Opacity</span>
-                        <span class="slider-val" id="alphaDisp">100 (39%)</span>
+                        <span class="slider-val" id="alphaDisp">50 (20%)</span>
                     </div>
-                    <input type="range" id="alphaRange" min="10" max="255" value="100">
+                    <input type="range" id="alphaRange" min="10" max="255" value="50">
                 </div>
 
                 <div class="slider-container">
                     <div class="slider-header">
                         <span class="slider-label">Minimum Size</span>
-                        <span class="slider-val" id="minRadDisp">20px</span>
+                        <span class="slider-val" id="minRadDisp">40px</span>
                     </div>
-                    <input type="range" id="minRadiusRange" min="10" max="200" step="5" value="20">
+                    <input type="range" id="minRadiusRange" min="10" max="200" step="5" value="40">
                 </div>
 
                 <div class="slider-container">
                     <div class="slider-header">
                         <span class="slider-label">Maximum Size</span>
-                        <span class="slider-val" id="maxRadDisp">380px</span>
+                        <span class="slider-val" id="maxRadDisp">360px</span>
                     </div>
-                    <input type="range" id="maxRadiusRange" min="50" max="600" step="5" value="380">
+                    <input type="range" id="maxRadiusRange" min="50" max="600" step="5" value="360">
                 </div>
 
                 <div class="toggle-row">

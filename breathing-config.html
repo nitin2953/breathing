@@ -467,17 +467,17 @@
                 <div class="slider-container">
                     <div class="slider-header">
                         <span class="slider-label">Minimum Size</span>
-                        <span class="slider-val" id="minRadDisp">40px</span>
+                        <span class="slider-val" id="minRadDisp">60px</span>
                     </div>
-                    <input type="range" id="minRadiusRange" min="10" max="200" step="5" value="40">
+                    <input type="range" id="minRadiusRange" min="10" max="200" step="5" value="60">
                 </div>
 
                 <div class="slider-container">
                     <div class="slider-header">
                         <span class="slider-label">Maximum Size</span>
-                        <span class="slider-val" id="maxRadDisp">360px</span>
+                        <span class="slider-val" id="maxRadDisp">320px</span>
                     </div>
-                    <input type="range" id="maxRadiusRange" min="50" max="600" step="5" value="360">
+                    <input type="range" id="maxRadiusRange" min="50" max="600" step="5" value="320">
                 </div>
 
                 <div class="toggle-row">
@@ -532,13 +532,13 @@
             activePreset: 'Normal',
             bg: { type: 'color', value: '#0f0f10', img: null },
             settings: {
-                r: 26, g: 115, b: 232, alpha: 100, // Google blue
-                maxRadius: 360, minRadius: 40,
+                r: 26, g: 115, b: 232, alpha: 50, // Google blue
+                maxRadius: 320, minRadius: 60,
                 showBorder: true
             },
             presets: {
                 'Normal': { inhale: 4.0, holdIn: 1.0, exhale: 4.0, holdEx: 1.0 },
-                'Focus':  { inhale: 4.0, holdIn: 7.0, exhale: 8.0, holdEx: 0.0 },
+                'Monk':  { inhale: 6.0, holdIn: 6.0, exhale: 8.0, holdEx: 6.0 },
                 'Quick':  { inhale: 2.0, holdIn: 0.0, exhale: 2.0, holdEx: 0.0 }
             }
         };
@@ -775,7 +775,7 @@
 
         // Code Generation
         function updateCode() {
-            let txt = `[Settings]\nActivePreset=${state.activePreset}\nShowBorder=${state.settings.showBorder?1:0}\nAlpha=${state.settings.alpha}\nColorR=${state.settings.r}\nColorG=${state.settings.g}\nColorB=${state.settings.b}\nMaxRadius=${state.settings.maxRadius}\nMinRadius=${state.settings.minRadius}\n\n`;
+            let txt = `[Settings]\nActivePreset=${state.activePreset}\nMaxRadius=${state.settings.maxRadius}\nMinRadius=${state.settings.minRadius}\nShowBorder=${state.settings.showBorder?1:0}\nAlpha=${state.settings.alpha}\nColorR=${state.settings.r}\nColorG=${state.settings.g}\nColorB=${state.settings.b}\n\n`;
             Object.keys(state.presets).forEach(n => {
                 const p = state.presets[n];
                 txt += `[${n}]\nInhale=${p.inhale.toFixed(1)}\nHoldIn=${p.holdIn.toFixed(1)}\nExhale=${p.exhale.toFixed(1)}\nHoldEx=${p.holdEx.toFixed(1)}\n\n`;

@@ -21,33 +21,33 @@ My inspiration was [**Exhale**](https://github.com/peterklingelhofer/exhale).
 - The original **macOS version** (built in **Swift**) is fantastic—it is incredibly small, resource-friendly, and smooth.  
 - However, the **Windows/Linux port** was built using **Electron**.
 
-I realized the file size of Windows/Linux version was **over 600MB** and it consumed significant RAM (~100MB) just to render a moving circle.
+I realized the file size of the Windows/Linux version was **over 600MB** and it consumed significant RAM (\~100MB) just to render a moving circle.
 
 I wanted the efficiency of the original Swift app, but on Windows.
 
-But **I am a web developer.** I have zero experience making native Windows apps. So, I vibe coded **Breathing** using **Gemini Deep Research**, **Gemini 3 Pro** and **Antigravity**. I tried keeping the app size as low as possible and resource friendly.
+But **I am a web developer.** I have zero experience making native Windows apps. So, I vibe coded **Breathing** using **Gemini Deep Research**, **Gemini 3 Pro**, and **Antigravity**. I tried keeping the app size as low as possible and resource-friendly.
 
 **The Result:**
 
 - **Size:** 250KB (\~150KB exe and 100KB icons).  
-- **Performance:** Uses almost 0% CPU, 5-10% GPU and <10MB RAM.  
+- **Performance:** Uses almost 0% CPU, 5-10% GPU, and \<10MB RAM.  
 - **Tech:** Native C++ using Windows **DirectComposition**.
 
 ## **✨ Features**
 
 - **Ghost Mode:** The window is "click-through". You can keep working/typing while the breathing guide floats above your work.  
 - **System Tray:** Right-click the icon to switch presets (Normal, Focus, Quick) or toggle the border ring.  
-- **Auto-Config:** The app automatically generates a `config.ini` file if you don't have one.
+- **Auto-Config:** The app automatically generates a config.ini file if you don't have one.
 
 ## **🎨 Visual Config Generator**
 
 Since I'm a web dev, I didn't want to manually edit text files to change colors.
 
-I included a file named breathing-config.html ([live](https://nitin2953.github.io/breathing/breathing-config.html)) in this repository.
+I included a file named breathing-config.html ([live version](https://nitin2953.github.io/breathing/breathing-config.html)) in this repository.
 
 1. Open breathing-config.html ([live](https://nitin2953.github.io/breathing/breathing-config.html)) in your browser.  
 2. Optional: **Drag & Drop** a screenshot of your desktop/working app into the page.  
-3. Visually adjust the size, colors, and timings.  
+3. Visually adjust the size, colors, timings and add new presets.  
 4. Click **"Copy Config"** and paste it into your config.ini file.
 
 ## **🤓 Under the Hood (For Developers)**
@@ -71,12 +71,15 @@ Uses QueryPerformanceCounter (Hardware Timer) to calculate Delta Time, ensuring 
 
 ### **Option 1: Download**
 
-Download Breathing.exe and just run it.
+1. Go to the [**Releases**](https://github.com/nitin2953/breathing/releases) page, download Breathing.exe, and just run it.
+
+2. **To Enable Auto-Startup:** Right-click the tray icon and select "Run on Startup".
 
 ### **Option 2: Build it yourself**
 
 I used **Visual Studio Build Tools 2022 LTSC → "Desktop development with C++"**.
-I have only tested it on Windows 11, it will work on Windows 10, don't know about 8 and surely won't work on Windows 7.
+
+I have only tested it on Windows 11\. It will likely work on Windows 10, unsure about 8, and definitely won't work on Windows 7\.
 
 1. Open **Developer Command Prompt for VS 2022**.  
 2. Run:
